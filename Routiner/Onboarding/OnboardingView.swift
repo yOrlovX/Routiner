@@ -7,7 +7,14 @@
 
 import SwiftUI
 
+enum OnboardingState {
+    case first
+    case second
+    case third
+}
+
 struct OnboardingView: View {
+    @State private var onboardingState: OnboardingState = .first
     
     var body: some View {
         ZStack {
@@ -17,9 +24,17 @@ struct OnboardingView: View {
             CirclesView()
             VStack {
                 Spacer()
-                firstOnboardingStateText
+                
+                switch onboardingState {
+                case .first:
+                    firstOnboardingStateText
+                case .second:
+                    secondOnboardingStateText
+                case .third:
+                    thirdOnboardingStateText
+                }
                 buttonsContainer
-            } 
+            }
         }
     }
 }
@@ -42,14 +57,9 @@ extension OnboardingView {
                         .foregroundColor(index == 0 ? .white : .primaryBlue60)
                 }
             }
-        }
-    }
-}
-
-extension OnboardingView {
-    private var buttonsContainer: some View {
-        VStack(spacing: 12) {
-            Button(action: {}) {
+            .padding(.top, 24)
+            
+            Button(action: { onboardingState = .second }) {
                 Text("Next")
                     .foregroundColor(.black)
                     .font(.system(size: 14, weight: .medium))
@@ -59,8 +69,80 @@ extension OnboardingView {
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
             .tint(.white)
+            .padding(.top, 40)
+        }
+    }
+    
+    private var secondOnboardingStateText: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Track Your Progress")
+                .foregroundColor(.white)
+                .font(.system(size: 40, weight: .bold))
             
-            HStack(spacing: 25) {
+            Text("Everyday you become one step closer to your goal. Don’t give up!")
+                .foregroundColor(.primaryBlue20)
+                .font(.system(size: 14, weight: .medium))
+            
+            HStack {
+                ForEach(0..<3) { index in
+                    Circle()
+                        .frame(width: 8, height: 8)
+                        .foregroundColor(index == 1 ? .white : .primaryBlue60)
+                }
+                .padding(.top, 24)
+            }
+            Button(action: { onboardingState = .third }) {
+                Text("Next")
+                    .foregroundColor(.black)
+                    .font(.system(size: 14, weight: .medium))
+                    .frame(width: UIScreen.main.bounds.width - 48)
+                    .frame(height: 52)
+            }
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
+            .tint(.white)
+            .padding(.top, 40)
+        }
+    }
+    
+    private var thirdOnboardingStateText: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Stay Together and Strong")
+                .foregroundColor(.white)
+                .font(.system(size: 40, weight: .bold))
+            
+            Text("Find friends to discuss common topics. Complete challenges together.")
+                .foregroundColor(.primaryBlue20)
+                .font(.system(size: 14, weight: .medium))
+            
+            HStack {
+                ForEach(0..<3) { index in
+                    Circle()
+                        .frame(width: 8, height: 8)
+                        .foregroundColor(index == 2 ? .white : .primaryBlue60)
+                }
+                .padding(.top, 24)
+            }
+            //button go to login view
+            Button(action: {}) {
+                Text("Continue with E-mail")
+                    .foregroundColor(.black)
+                    .font(.system(size: 14, weight: .medium))
+                    .frame(width: UIScreen.main.bounds.width - 48)
+                    .frame(height: 52)
+            }
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
+            .tint(.white)
+            .padding(.top, 40)
+        }
+    }
+}
+
+extension OnboardingView {
+    private var buttonsContainer: some View {
+        VStack(spacing: 12) {
+            HStack(spacing: 5) {
                 Button(action: {}) {
                     HStack {
                         Image("apple")
@@ -70,6 +152,7 @@ extension OnboardingView {
                             .font(.system(size: 14, weight: .medium))
                             .frame(height: 36)
                     }
+                    .padding(.horizontal, 10)
                 }
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.roundedRectangle(radius: 40))
@@ -84,6 +167,7 @@ extension OnboardingView {
                             .font(.system(size: 14, weight: .medium))
                             .frame(height: 36)
                     }
+                    .padding(.horizontal, 10)
                 }
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.roundedRectangle(radius: 40))
@@ -98,6 +182,7 @@ extension OnboardingView {
                             .font(.system(size: 14, weight: .medium))
                             .frame(height: 36)
                     }
+                    .padding(.horizontal, 10)
                 }
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.roundedRectangle(radius: 40))
@@ -108,6 +193,7 @@ extension OnboardingView {
                 .foregroundColor(.primaryBlue40)
                 .font(.system(size: 12, weight: .medium))
         }
+        .padding(.top, 12)
     }
 }
 
