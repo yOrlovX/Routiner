@@ -16,3 +16,13 @@ struct PrimaryWhiteButton: ViewModifier {
             .frame(height: 52)
     }
 }
+
+struct PrimaryBlueButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(.white)
+            .font(.system(size: 14, weight: .medium))
+            .frame(width: UIScreen.main.bounds.width - 48)
+            .frame(height: 52)
+    }
+}

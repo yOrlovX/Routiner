@@ -20,5 +20,6 @@ extension Color {
     static let primaryBlack10 = Color("primaryBlack10")
     static let primaryBlack20 = Color("primaryBlack20")
     static let primaryBlack40 = Color("primaryBlack40")
+    static let primaryBlack60 = Color("primaryBlack60")
     static let primaryBlack80 = Color("primaryBlack80")
 }
