@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923E198D2CEF1808009E3B6B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E198C2CEF1808009E3B6B /* HomeView.swift */; };
+		923E19902CEF1826009E3B6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E198F2CEF1826009E3B6B /* LoginView.swift */; };
 		92C2C0EB2CEDF02200E47DC6 /* RoutinerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2C0EA2CEDF02200E47DC6 /* RoutinerApp.swift */; };
-		92C2C0ED2CEDF02200E47DC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2C0EC2CEDF02200E47DC6 /* ContentView.swift */; };
 		92C2C0EF2CEDF02400E47DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C2C0EE2CEDF02400E47DC6 /* Assets.xcassets */; };
 		92C2C0F22CEDF02400E47DC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C2C0F12CEDF02400E47DC6 /* Preview Assets.xcassets */; };
 		92C2C0FA2CEDF16B00E47DC6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2C0F92CEDF16B00E47DC6 /* Extensions.swift */; };
@@ -18,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		923E198C2CEF1808009E3B6B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		923E198F2CEF1826009E3B6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		92C2C0E72CEDF02200E47DC6 /* Routiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Routiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C2C0EA2CEDF02200E47DC6 /* RoutinerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinerApp.swift; sourceTree = "<group>"; };
-		92C2C0EC2CEDF02200E47DC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92C2C0EE2CEDF02400E47DC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92C2C0F12CEDF02400E47DC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92C2C0F92CEDF16B00E47DC6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -40,6 +42,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		923E198B2CEF17FA009E3B6B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				923E198C2CEF1808009E3B6B /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		923E198E2CEF1812009E3B6B /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				923E198F2CEF1826009E3B6B /* LoginView.swift */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
 		92C2C0DE2CEDF02200E47DC6 = {
 			isa = PBXGroup;
 			children = (
@@ -60,7 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				92C2C0EA2CEDF02200E47DC6 /* RoutinerApp.swift */,
-				92C2C0EC2CEDF02200E47DC6 /* ContentView.swift */,
+				923E198E2CEF1812009E3B6B /* Login&Register */,
+				923E198B2CEF17FA009E3B6B /* Home */,
 				92C2C1002CEDFBAA00E47DC6 /* Onboarding */,
 				92C2C0FB2CEDF2A000E47DC6 /* Splash */,
 				92C2C0F82CEDF14500E47DC6 /* Utilities */,
@@ -119,6 +138,8 @@
 			dependencies = (
 			);
 			name = Routiner;
+			packageProductDependencies = (
+			);
 			productName = Routiner;
 			productReference = 92C2C0E72CEDF02200E47DC6 /* Routiner.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +168,8 @@
 				Base,
 			);
 			mainGroup = 92C2C0DE2CEDF02200E47DC6;
+			packageReferences = (
+			);
 			productRefGroup = 92C2C0E82CEDF02200E47DC6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,9 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C2C0FF2CEDFA1E00E47DC6 /* CirclesView.swift in Sources */,
-				92C2C0ED2CEDF02200E47DC6 /* ContentView.swift in Sources */,
+				923E19902CEF1826009E3B6B /* LoginView.swift in Sources */,
 				92C2C0FD2CEDF2C100E47DC6 /* SplashView.swift in Sources */,
 				92C2C1022CEE024A00E47DC6 /* OnboardingView.swift in Sources */,
+				923E198D2CEF1808009E3B6B /* HomeView.swift in Sources */,
 				92C2C0FA2CEDF16B00E47DC6 /* Extensions.swift in Sources */,
 				92C2C0EB2CEDF02200E47DC6 /* RoutinerApp.swift in Sources */,
 			);
