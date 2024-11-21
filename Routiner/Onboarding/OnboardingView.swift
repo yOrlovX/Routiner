@@ -14,6 +14,7 @@ enum OnboardingState {
 }
 
 struct OnboardingView: View {
+    @Environment(\.router) var router
     @State private var onboardingState: OnboardingState = .first
     
     var body: some View {
@@ -123,8 +124,9 @@ extension OnboardingView {
                 }
                 .padding(.top, 24)
             }
-            //button go to login view
-            Button(action: {}) {
+            Button(action: { router.showScreen(.push) { _ in
+                LoginView()
+            }}) {
                 Text("Continue with E-mail")
                     .foregroundColor(.black)
                     .font(.system(size: 14, weight: .medium))

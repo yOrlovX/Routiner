@@ -17,8 +17,8 @@ struct CirclesView: View {
                     Circle()
                         .stroke(lineWidth: 1)
                         .frame(
-                            width: maxSize - CGFloat(index * 40),
-                            height: maxSize - CGFloat(index * 40)
+                            width: max(0, maxSize - CGFloat(index * 40)),
+                            height: max(0, maxSize - CGFloat(index * 40))
                         )
                         .foregroundColor(.white)
                         .opacity(0.1)
@@ -29,6 +29,7 @@ struct CirclesView: View {
         }
     }
 }
+
 
 struct CirclesView_Previews: PreviewProvider {
     static var previews: some View {

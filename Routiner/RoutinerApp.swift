@@ -11,7 +11,7 @@ import SwiftUI
 struct RoutinerApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            RootView()
         }
     }
 }

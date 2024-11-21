@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		923E198D2CEF1808009E3B6B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E198C2CEF1808009E3B6B /* HomeView.swift */; };
 		923E19902CEF1826009E3B6B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E198F2CEF1826009E3B6B /* LoginView.swift */; };
+		923E19932CEF3925009E3B6B /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 923E19922CEF3925009E3B6B /* SwiftfulRouting */; };
+		923E19962CEF3944009E3B6B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E19952CEF3944009E3B6B /* RootView.swift */; };
 		92C2C0EB2CEDF02200E47DC6 /* RoutinerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2C0EA2CEDF02200E47DC6 /* RoutinerApp.swift */; };
 		92C2C0EF2CEDF02400E47DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C2C0EE2CEDF02400E47DC6 /* Assets.xcassets */; };
 		92C2C0F22CEDF02400E47DC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92C2C0F12CEDF02400E47DC6 /* Preview Assets.xcassets */; };
@@ -21,6 +23,7 @@
 /* Begin PBXFileReference section */
 		923E198C2CEF1808009E3B6B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		923E198F2CEF1826009E3B6B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		923E19952CEF3944009E3B6B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		92C2C0E72CEDF02200E47DC6 /* Routiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Routiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C2C0EA2CEDF02200E47DC6 /* RoutinerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinerApp.swift; sourceTree = "<group>"; };
 		92C2C0EE2CEDF02400E47DC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923E19932CEF3925009E3B6B /* SwiftfulRouting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +62,14 @@
 			path = "Login&Register";
 			sourceTree = "<group>";
 		};
+		923E19942CEF3935009E3B6B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				923E19952CEF3944009E3B6B /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		92C2C0DE2CEDF02200E47DC6 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				92C2C0EA2CEDF02200E47DC6 /* RoutinerApp.swift */,
+				923E19942CEF3935009E3B6B /* Root */,
 				923E198E2CEF1812009E3B6B /* Login&Register */,
 				923E198B2CEF17FA009E3B6B /* Home */,
 				92C2C1002CEDFBAA00E47DC6 /* Onboarding */,
@@ -139,6 +152,7 @@
 			);
 			name = Routiner;
 			packageProductDependencies = (
+				923E19922CEF3925009E3B6B /* SwiftfulRouting */,
 			);
 			productName = Routiner;
 			productReference = 92C2C0E72CEDF02200E47DC6 /* Routiner.app */;
@@ -169,6 +183,7 @@
 			);
 			mainGroup = 92C2C0DE2CEDF02200E47DC6;
 			packageReferences = (
+				923E19912CEF3925009E3B6B /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
 			);
 			productRefGroup = 92C2C0E82CEDF02200E47DC6 /* Products */;
 			projectDirPath = "";
@@ -196,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923E19962CEF3944009E3B6B /* RootView.swift in Sources */,
 				92C2C0FF2CEDFA1E00E47DC6 /* CirclesView.swift in Sources */,
 				923E19902CEF1826009E3B6B /* LoginView.swift in Sources */,
 				92C2C0FD2CEDF2C100E47DC6 /* SplashView.swift in Sources */,
@@ -403,6 +419,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		923E19912CEF3925009E3B6B /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		923E19922CEF3925009E3B6B /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923E19912CEF3925009E3B6B /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 92C2C0DF2CEDF02200E47DC6 /* Project object */;
 }
