@@ -62,10 +62,7 @@ extension OnboardingView {
             
             Button(action: { onboardingState = .second }) {
                 Text("Next")
-                    .foregroundColor(.black)
-                    .font(.system(size: 14, weight: .medium))
-                    .frame(width: UIScreen.main.bounds.width - 48)
-                    .frame(height: 52)
+                    .modifier(PrimaryWhiteButton())
             }
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
@@ -94,10 +91,7 @@ extension OnboardingView {
             }
             Button(action: { onboardingState = .third }) {
                 Text("Next")
-                    .foregroundColor(.black)
-                    .font(.system(size: 14, weight: .medium))
-                    .frame(width: UIScreen.main.bounds.width - 48)
-                    .frame(height: 52)
+                    .modifier(PrimaryWhiteButton())
             }
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
@@ -128,10 +122,7 @@ extension OnboardingView {
                 LoginView()
             }}) {
                 Text("Continue with E-mail")
-                    .foregroundColor(.black)
-                    .font(.system(size: 14, weight: .medium))
-                    .frame(width: UIScreen.main.bounds.width - 48)
-                    .frame(height: 52)
+                    .modifier(PrimaryWhiteButton())
             }
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
